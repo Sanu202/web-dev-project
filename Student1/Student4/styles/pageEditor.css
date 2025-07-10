@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5faf2;
+    color: #333333;
+}
+
+.container {
+    /* background: linear-gradient(135deg,#d7f5d3 25%, #a3d89f 75%); */
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100vw;
+    margin: 0 ;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 90hv;
+}
+main {
+    flex: 3;
+    padding-right: 20px;
+}
+/* sidebar */
+aside {
+    flex: 1;
+    background-color: #e0eae6;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(23, 77, 38, 0.15);
+    height:fit-content;
+}
+aside li{
+    padding-bottom: 8px;
+    padding-bottom: 6px;
+}
+aside ul{
+    padding-left: 25px;
+    margin-top: 0;
+}
+section {
+    margin-bottom: 20px;
+    padding: 2% 3%;
+    border: 1px solid #c4d1c0 ; 
+    background-color: #ebf4f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+
+
+}
+section h2{
+    font-size: 24px;
+    color: #1a3d12;
+    padding-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px soild #174d26;
+    padding-bottom: 6px;
+}
+section h3{
+    font-size: 24px;
+    color: #1a3d12;
+    margin-bottom: 15px;
+    border-bottom: 2px soild #174d26;
+    padding-bottom: 6px;
+}
+section h4{
+    font-size: 22px;
+    color: #1a3d12;
+    margin-bottom: 12px;
+    margin-top: 20px;
+   
+    font-weight: 600;
+}
+section h5{
+        font-size: 24px;
+    color: #1a3d12;
+    /* margin-bottom: 15px; */
+    border-bottom: 2px soild #174d26;
+    padding-bottom: 6px;
+    padding-top:100px;
+}
+section ul {
+    padding-left: 25px; /* space between bullets and border */
+    margin-bottom: 20px;
+}
+section li{
+    margin-bottom: 10px; /* space between list items */
+    line-height: 1.5;
+}
+
+/* paragraphs */
+p{
+    line-height:1.7;
+    margin-bottom: 18px;
+    font-size: 19px;
+    color: #333;
+}
+header, footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.ref li{
+    list-style: none;
+    padding-bottom: 9px;
+}
+
+aside a{
+    text-decoration : none;
+    color:#174d26;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+aside li{
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+}
+
+.stud {
+    text-align: center;
+    line-height: 1.3; /* Fix line height */
+    background-color:beige;
+    color: #174d26; /* Dark green text, visble */
+    
+    margin-top: 8px;
+    padding: 10px; /* optionnaly add some padding for betterv */
+}
+
+.top {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+        
+.top a {
+    padding: 10px 22px; /* Adds padding for button-like feel */
+    background-color: #049f28; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline */
+    border-radius: 20px; /* Rounds the corners */
+    font-size: 13px; /* Adjust font size */
+    font-weight: bold; /* Make the text stand out */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: background-colour 0.3s, box-shadow 0.3s ease;
+}
+
+.top a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+/* Put this in pageEditor.css */
+
+main img, section img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+aside ul{
+    padding-left: 25px;
+    margin-top:0; /* Remove unwanted top margin */
+
+}
+aside h3 {
+    margin-top: 0; /* Preventing extra space above heading */
+    margin-bottom: 20px; /* adds space between heading and li */
+    font-size: 22px;
+    color: #174d26;
+    font-weight: 700;
+}
+p{
+    line-height: 1.6; /* Adds better line spacing for readability */
+    margin-bottom: 15px; /*     Space between paragraphs */
+    font-size: 16px; 
+    color: #333333; /* dark text */
+
+}
+aside a:hover {
+    color: #049f28;
+    text-decoration: underline
+}
+

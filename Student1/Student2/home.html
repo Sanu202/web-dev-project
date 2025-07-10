@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Life on Land</title>
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/SavingEndangeredSpecies.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f9f4;
+      color: #222;
+    }
+
+    /* Hero Video Section */
+    .hero-video-container {
+      position: relative;
+      width: 100%;
+      height: 85vh;
+      overflow: hidden;
+    }
+
+    .hero-video-container video {
+      width: 100%;
+      height: 85vh;
+      object-fit: cover;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      margin: 0;
+    }
+
+    /* About Section */
+    .about {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .about-content img {
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Mission Section */
+    .mission {
+      background-color: #e0f7fa;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .mission h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .mission p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Learn More Heading */
+    .learn-more-heading {
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    .learn-more-heading h2 {
+      font-size: 2.5rem;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    /* Card Section */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 0 20px 50px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .see-more {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #328E6E;
+      text-decoration: underline;
+    }
+    .video-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.video-card {
+  flex: 1 1 400px;
+  max-width: 480px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.02);
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 250px;
+}
+
+.video-card p {
+  padding: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- Header with logo, slogan, and profile icon -->
+  <div class="header">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+    </div>
+    <div class="slogan">Protect. Prospor. Preserve.</div>
+    <a href="../Student4/User Profile.html" target="_blank" rel="noopener noreferrer" class="profile-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#2e7d32" viewBox="0 0 24 24">
+        <path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.4c-3.2 0-9.5 1.6-9.5 4.8v1.4h19v-1.4c0-3.2-6.3-4.8-9.5-4.8z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Navigation bar -->
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="table.html">Table</a>
+    <a href="../volunteer.html">Volunteer</a>
+    <div class="dropdown">
+      <a href="#">Research <span class="arrow">⏷</span></a>
+      <div class="dropdown-content">
+        <a href="../content_ST1.html">Mountain Ecosystems</a>
+        <a href="content_ST2.html">Saving Endangered Species</a>
+        <a href="../Student3/content_ST3.html">Desertification and Soil Degredation</a>
+        <a href="../Student4/content_ST4.html">Biodiversity Conservations</a>
+      </div>
+    </div>
+    <a href="../Student3/feedback.html">Feedback</a>
+    <a href="../Student4/Sitemap.html">Sitemap</a>
+    <a href="../Student3/team.html">Our team</a>
+  </div>
+
+  <!-- Hero Video Section -->
+  <div class="hero-video-container">
+    <video autoplay muted loop>
+      <source src="videos/animlas.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-text">
+      <h1>Preserve Forests. Protect Wildlife. Restore Balance.</h1>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About</h2>
+    <div class="about-content">
+     <p style="text-align: center;font-size: 20px;line-height: 1.7;";>
+  Life on Land, or Sustainable Development Goal 15 (SDG 15), focuses on the protection, restoration, and sustainable use of terrestrial ecosystems. Our planet’s forests, mountains, drylands, and biodiversity are under increasing pressure due to deforestation, desertification, illegal wildlife trade, and climate change.
+  These ecosystems are essential for human survival and well-being. They purify the air, regulate the climate, provide food and water, and support the livelihoods of millions of people. By taking action today, we can halt biodiversity loss, promote sustainable land use, and ensure future generations inherit a healthy and vibrant planet.
+</p>
+
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="mission">
+    <h2>Our Mission</h2>
+    <p>
+      Our mission is to inspire communities to sustainably manage forests, protect threatened species, and restore degraded land through education, action, and innovation.
+    </p>
+  </section>
+<!-- Video Cards Section -->
+<section class="cards">
+  <div class="card">
+    <iframe 
+  width="100%" 
+  height="400" 
+  src="https://www.youtube.com/embed/_dWJVHIE9S8" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen>
+</iframe>
+
+    <div class="card-content">
+      <h3>Why Protect Forests?</h3>
+      <p>A short documentary about deforestation and its global impact.</p>
+    </div>
+  </div>
+
+  <div class="card">
+        <iframe 
+  width="100%" 
+  height="400" 
+  src="https://www.youtube.com/embed/hlETaHivmyA" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen>
+</iframe>
+    <div class="card-content">
+      <h3>Life on Land Explained</h3>
+      <p>Understanding SDG 15 and how everyone can take part.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+
+  <!-- Learn More Section Heading -->
+  <div class="learn-more-heading">
+    <h2>Learn More</h2>
+  </div>
+
+  <!-- Card Tiles Section -->
+  <section class="cards">
+    <a href="../content_ST1.html" class="card">
+      <img src="../images/mountains.jpg" alt="Mountains">
+      <div class="card-content">
+        <h3>Mountain Ecosystems</h3>
+        <p>Uncover the vital and often underestimated role mountains play in sustaining life far beyond their majestic peaks</p>
+        <span class="see-more">See More →</span>
+      </div>
+    </a>
+
+    <a href="content_ST2.html" class="card">
+      <img src="images/endangered.jpg" alt="Wildlife Protection">
+      <div class="card-content">
+        <h3>Saving Endangered Species</h3>
+        <p>Endangered species are animals or plants at serious risk of extinction due to threats like habitat loss, climate change, poaching, and pollution.</p>
+        <span class="see-more">See More →</span>
+      </div>
+    </a>
+
+    <a href="../Student3/content_ST3.html" class="card">
+      <img src="../images/reforestation.jpg" alt="reforestation">
+      <div class="card-content">
+        <h3>Desertification and Land Degredation</h3>
+        <p>As a result of unsustainable agricultural practices, deforestation, overgrazing, and the impacts of climate change. Land degradation is a </p>
+        <span class="see-more">See More →</span>
+      </div>
+    </a>
+
+    <a href="../Student4/content_ST4.html" class="card">
+      <img src="../images/community.jpg" alt="Community Involvement">
+      <div class="card-content">
+        <h3>Biodiversity Conservation</h3>
+        <p>Includes diversity within species, between species, and of ecosystems. Biodiversity is essential for the stability and health of natural systems</p>
+        <span class="see-more">See More →</span>
+      </div>
+    </a>
+  </section>
+
+</body>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <!-- Column 1 with icons under Contact Us -->
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="../Student3/feedback.html">Contact Us</a></li>
+        </ul>
+        <div class="footer-icons">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="footer-column">
+        <h4>Page Editors</h4>
+        <ul>
+         <li><a href="../pageEditor_ST1.html">Student 01 Page Editor</a></li>
+          <li><a href="pageEditor_ST2.html">Student 02 Page Editor</a></li>
+          <li><a href="../Student3/pageEditor_ST3.html">Student 03 Page Editor</a></li>
+          <li><a href="../Student4/editor.html">Student 04 Page Editor</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="footer-column">
+        <h4>Validation Pages</h4>
+        <ul>
+       <li><a href="../validation_ST1.html">Student 01 Validation Page</a></li>
+          <li><a href="validation_ST2.html">Student 02 Validation Page</a></li>
+          <li><a href="../Student3/validation _ ST3.html">Student 03 Validation Page</a></li>
+          <li><a href="../Student4/Validation.html">Student 04 Validation Page</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Rights -->
+    <div class="footer-rights">
+      &copy; 2025 Life on Land. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>

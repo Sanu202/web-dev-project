@@ -1,0 +1,57 @@
+/* Header styles */
+.header {
+  background-color: #e8f5e9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  /* border-bottom: 2px solid #c8e6c9; */
+  border-bottom: 2px solid #B9D4AA;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1100;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .logo img {
+  max-height: 50px; /* increase this value for a larger logo */
+}
+
+.header .slogan {
+  font-size: 24px;
+  font-weight: 600;
+  /* color: #2e7d32; */
+  color: #328E6E;
+  text-align: center;
+  flex: 1;
+}
+
+/* Make the profile icon circular and center it */
+.header .profile-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* Adjust the size of the circle */
+  width: 50px; /* Adjust the size of the circle */
+  background-color: #ffffff;
+  border-radius: 50%; /* Circular shape */
+  /* border: 2px solid #2e7d32; Optional: add border to match theme */
+  border: 2px solid #328E6E;
+}
+
+.header .profile-icon img {
+  height: 80%; /* Ensure the image fits within the circle */
+  width: 80%; /* Ensure the image fits within the circle */
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.profile-icon {
+  text-decoration: none; /* Remove underline */
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor - Sanuthmi Jayalath</title>
+    <link rel="stylesheet" href="styles/page_editor.css">
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+      <link rel="stylesheet" href="styles/content.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="styles/content_ST3.css"/>
+     
+</head>
+
+<body>
+    <!-- Header with logo, slogan, and profile icon -->
+    <div class="header">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" />
+      </div>
+      <div class="slogan">Protect. Prospor. Preserve.</div>
+      <a
+        href="Student4/User Profile.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="profile-icon"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          fill="#328E6E"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.4c-3.2 0-9.5 1.6-9.5 4.8v1.4h19v-1.4c0-3.2-6.3-4.8-9.5-4.8z"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+      <a href="Student2/home.html">Home</a>
+      <!-- <a href="#">Summary</a> -->
+      <a href="volunteer.html">Volunteer</a>
+      <div class="dropdown">
+        <a href="#">Research <span class="arrow">⏷</span></a>
+        <div class="dropdown-content">
+             <a href="content_ST1.html">Mountain Ecosystems</a>
+          <a href="Student2/content_ST2.html">Saving Endangered Species</a>
+          <a href="Student3/content_ST3.html">Desertification and Soil Degredation</a>
+          <a href="Student4/content_ST4.html">Biodiversity Conservations</a>
+        </div>
+      </div>
+      <a href="Student3/feedback.html">Feedback</a>
+      <a href="Student4/Sitemap.html">Sitemap</a>
+      <a href="Student3/team.html">Our team</a>
+    </div>
+   
+
+
+
+<section class="stud">
+    <h2>Sanuthmi Jayalath - Student 1 </h2>
+   
+    
+</section>
+
+<div class="container">
+    <main>
+
+        <!-- splash screen Section -->
+
+           <section>
+  <h3 id="splashscreen">Splash Page</h3>
+
+  <h4>Technical Description</h4>
+  <p>
+    The Loading Screen is a transitional splash page that presents a fullscreen background video and animated content 
+    before redirecting users to the home page after a delay. It leverages semantic HTML elements and advanced CSS animations 
+    for an engaging user experience. The background video (`&lt;video&gt;`) provides immersive visual storytelling, while 
+    animated text and a three-dot spinner create visual interest during the wait. CSS keyframes manage typing, blinking, fading, 
+    and bouncing effects. A `meta` tag in the `<head>` automatically redirects the user after 6 seconds.
+  </p>
+
+  <h4>Key Tags and Techniques</h4>
+  <ul>
+    <li>&lt;video&gt; — Embeds the fullscreen background video.</li>
+    <li>&lt;meta http-equiv="refresh"&gt; — Automatically redirects to the homepage.</li>
+    <li>&lt;img&gt; — Displays the site logo with a fade-in effect.</li>
+    <li><strong>keyframes</strong> — Powers animations such as typing, blinking, bounce, and fade-in.</li>
+    <li><strong>object-fit: cover</strong> — Ensures the video fills the entire screen.</li>
+    <li><strong>z-index</strong> — Manages layering between video and content.</li>
+    <li><strong>position: fixed</strong> — Keeps the loader and video elements in place.</li>
+    <li><strong>animation-delay</strong> — Staggers the appearance of content for a polished effect.</li>
+    <li><strong>Flexbox</strong> — Centers loader content vertically and horizontally.</li>
+    <li><strong>transition</strong> — Smoothens changes in opacity and visibility.</li>
+  </ul>
+
+  <h3>Accessibility</h3>
+  <ul>
+    <li>Readable and responsive typography with high contrast.</li>
+    <li>Alternative text on the logo for screen readers.</li>
+    <li>Graceful fallback text in case the video format isn't supported.</li>
+    <li>Logical content structure improves screen reader navigation.</li>
+    <li>Motion kept minimal and non-intrusive for comfort.</li>
+  </ul>
+
+  <h4>Links</h4>
+  <ul>
+    <li><a href="splash.html" target="_blank">View the Splash Page</a></li>
+    <li><a href="home.html" target="_blank">Landing Home Page</a></li>
+  </ul>
+</section>
+
+
+        <!-- volunteer Page Section -->
+        <section>
+  <h3 id="volunteer">Volunteer Page</h3>
+
+  <h4>Technical Description</h4>
+  <p>
+    The Volunteer Page presents a catalog of conservation programs using dynamic and responsive card components. 
+    Each project is showcased in a visually organized card layout within a Flexbox container, adapting across screen sizes. 
+    Users can sort programs using a dropdown menu. Cards include images, location-specific project titles, tags, durations, and pricing. 
+    Hover effects animate the cards for enhanced interactivity, and calls to action are provided through "View Project" and "Apply" buttons. 
+    A feedback section allows users to share their reviews using emoji-based ratings and a text input area. 
+    Verified participant reviews are displayed using styled testimonial cards.
+  </p>
+
+  <h4>Key Tags and Techniques</h4>
+  <ul>
+    <li>&lt;div class="card"&gt; — Container for each volunteer program.</li>
+    <li>&lt;img src="..." alt="..."&gt; — Displays project images with descriptions for accessibility.</li>
+    <li>&lt;select&gt; and &lt;option&gt; — Enables sorting functionality for filtering programs.</li>
+    <li>&lt;div class="tags"&gt; — Highlights features such as duration and cost using tag elements.</li>
+    <li><strong>Flexbox</strong> — Arranges cards and content responsively using flex-wrap and gap.</li>
+    <li><strong>box-shadow</strong> — Adds depth to project and review cards.</li>
+    <li><strong>hover</strong> effects — Adds smooth interactivity to buttons and cards.</li>
+    <li><strong>object-fit: cover</strong> — Maintains aspect ratio of images without distortion.</li>
+    <li><strong>border-radius</strong> — Smooths edges of cards, inputs, and buttons.</li>
+    <li><strong>transition</strong> — Animates scale and hover effects smoothly.</li>
+  </ul>
+
+  <h4>Accessibility</h4>
+  <ul>
+    <li>Alt text for all images for screen readers.</li>
+    <li>Color contrast maintained for readability.</li>
+    <li>Keyboard-navigable dropdown and form inputs.</li>
+    <li>Hover and focus effects enhance usability across devices.</li>
+    <li>Feedback form includes clearly labeled inputs and emoji symbols for expressive input.</li>
+  </ul>
+
+  <h4>Links</h4>
+  <ul>
+    <li><a href="volunteer.html" target="_blank">View the Volunteer Programs Page</a></li>
+    <li><a href="validation_ST3.html#volunteerVal" target="_blank">Validation for Volunteer Page</a></li>
+  </ul>
+</section>
+
+
+        <!-- Content Page Section -->
+        <section>
+  <h3 id="content">Content Page </h3>
+
+  <h4>Technical Description</h4>
+  <p>
+    The Mountain Ecosystem content page is designed using semantic HTML and a responsive layout to present educational information clearly.
+    It utilizes &lt;main&gt; and &lt;aside&gt; to separate main content and quick navigation. Each topic section is wrapped in a &lt;div class="card"&gt;,
+    styled with spacing and imagery to enhance engagement. The design uses Flexbox to support responsive side-by-side layout between the sidebar and main content.
+    Smooth scrolling and a scroll-to-top button improve usability on long pages.
+  </p>
+
+  <h4>Key Tags and Techniques</h4>
+  <ul>
+    <li>&lt;main&gt;, &lt;aside&gt; — Structure the page layout semantically.</li>
+    <li>&lt;div class="card"&gt; — Used to wrap individual topic sections.</li>
+    <li>&lt;h2&gt;, &lt;p&gt;, &lt;img&gt; — Present structured content with visuals.</li>
+    <li><strong>Sidebar Navigation</strong> — Provides quick links to internal page sections.</li>
+    <li><strong>Scroll-to-top Button</strong> — Enhances navigation usability.</li>
+    <li><strong>Responsive Design</strong> — Ensures proper layout on desktops, tablets, and mobiles.</li>
+    <li><strong>Padding and margin</strong> — Improve visual spacing and readability.</li>
+  </ul>
+
+  <h4>Accessibility</h4>
+  <ul>
+    <li>Alt text provided for all images describing mountain features and wildlife.</li>
+    <li>Headings follow a logical hierarchy (&lt;h2&gt;, &lt;h3&gt;).</li>
+    <li>Sidebar enhances keyboard navigation with internal links.</li>
+    <li>Content does not overflow on small screens.</li>
+    <li>Good contrast between text and background.</li>
+  </ul>
+
+  <h4>Links</h4>
+  <ul>
+    <li><a href="content_ST1.html" target="_blank">View the Content Page</a></li>
+    <li><a href="validation_ST3.html#contentVal" target="_blank">Validation for Content Page</a></li>
+  </ul>
+</section>
+
+
+        <!-- Challenges & Lessons Learned -->
+        <section>
+            <h3 id="challenge">Challenges and Lessons Learned</h3>
+            <p style="text-align: justify;">
+                While developing the Team, Volunteer, and Mountain Ecosystem pages, several challenges emerged that tested both technical skills and design understanding. One of the major challenges was ensuring responsiveness across various screen sizes. Making sure that elements like profile cards, sidebars, and content blocks adapted gracefully to mobile and tablet devices required meticulous use of Flexbox, media queries, and careful layout planning. Styling consistency was another hurdle, particularly due to the use of multiple external stylesheets. Conflicts between shared classes and overlapping CSS rules demanded better modularization and more descriptive class naming conventions. Handling images such as profile photos and banner visuals also presented difficulty. Ensuring they retained their aspect ratio, remained sharp, and integrated well into the layout without distortion required the use of object-fit: cover, fixed dimensions, and responsive design techniques. Creating intuitive dropdown menus for the navbar, without relying on JavaScript, called for precise CSS handling to maintain a smooth hover interaction and layout stability. Accessibility was an ongoing focus, with attention given to semantic HTML, logical heading structure, and meaningful alt text for images to support screen readers and ensure usability for all users.
+
+            </p>
+           
+        </section>
+
+        <!-- Compliance Section -->
+        <section>
+            <h3 id="compliance">Compliance</h3>
+             <p style="text-align: justify;">
+              The development of the Team Page, Volunteer Page, and Mountain Ecosystem Content Page was carried out in adherence to JANET regulations and recognized web development standards. All HTML and CSS code was validated to ensure semantic correctness and cross-browser compatibility. Accessibility requirements were met by incorporating meaningful alt attributes, logical heading structures, keyboard-navigable elements, and respecting user preferences for reduced motion. Responsive design techniques, such as Flexbox and media queries, ensured optimal usability across various devices. Visual consistency was maintained through a unified design language, while performance was optimized using compressed images and modular CSS. By aligning with JANET guidelines and W3C standards, the pages meet institutional compliance for quality, accessibility, and secure content delivery in educational environments.
+            </p>
+        </section>
+
+        <!-- References Section -->
+      <section id="image-references">
+  <h3>Image References</h3>
+  <ul>
+    <!-- Volunteer Programs Images -->
+    <li>
+      <strong>Forest Conservation (Kenya)</strong><br />
+      Image Title: Forest in Kenya<br />
+      Source: <a href="https://unsplash.com/photos/photo-of-green-forest-during-daytime-KF9a1cVgTKA" target="_blank" rel="noopener noreferrer">Unsplash – Photo by Sergey Pesterev</a><br />
+      License: Free to use under Unsplash License
+    </li>
+    <li>
+      <strong>Wildlife Habitat Restoration (Brazil)</strong><br />
+      Image Title: Amazon Rainforest<br />
+      Source: <a href="https://www.pexels.com/photo/amazon-forest-167699/" target="_blank" rel="noopener noreferrer">Pexels – Photo by Quang Nguyen Vinh</a><br />
+      License: Free to use with attribution
+    </li>
+    <li>
+      <strong>Beach Cleanup (Thailand)</strong><br />
+      Image Title: Phuket Beach<br />
+      Source: <a href="https://pixabay.com/photos/thailand-beach-sea-sand-nature-2049200/" target="_blank" rel="noopener noreferrer">Pixabay – Image by Walkerssk</a><br />
+      License: Pixabay License (no attribution required)
+    </li>
+    <li>
+      <strong>Tree Planting (India)</strong><br />
+      Image Title: Urban Tree Plantation<br />
+      Source: <a href="https://www.freepik.com/free-photos-vectors/tree-planting" target="_blank" rel="noopener noreferrer">Freepik – Tree planting illustration</a><br />
+      License: Free with attribution
+    </li>
+    <li>
+      <strong>Agroforestry Education (Peru)</strong><br />
+      Image Title: Farmland in Andes<br />
+      Source: <a href="https://unsplash.com/photos/peruvian-farm-scene-MmT2weJw7zQ" target="_blank" rel="noopener noreferrer">Unsplash – Photo by Deb Dowd</a><br />
+      License: Unsplash License
+    </li>
+    <li>
+      <strong>Wildlife Monitoring (South Africa)</strong><br />
+      Image Title: Zebra in Kruger<br />
+      Source: <a href="https://www.pexels.com/photo/photography-of-zebra-near-grass-38275/" target="_blank" rel="noopener noreferrer">Pexels – Photo by Frans van Heerden</a><br />
+      License: Free to use with attribution
+    </li>
+
+    <!-- Content Page Images (Mountain Ecosystem) -->
+    <li>
+      <strong>Mountain Ecosystem Images</strong>
+      <ul>
+        <li>
+          <em>Animals in Mountains</em><br />
+          Source: <a href="https://unsplash.com/photos/white-snow-covered-mountain-under-blue-sky-during-daytime-yuZ3hKxT7Yo" target="_blank" rel="noopener noreferrer">Unsplash – Photo by Kalen Emsley</a><br />
+          License: Free for personal and commercial use
+        </li>
+        <li>
+          <em>Beauty of Mountains</em><br />
+          Source: <a href="https://www.pexels.com/photo/landscape-nature-forest-trees-552785/" target="_blank" rel="noopener noreferrer">Pexels – Photo by Pixabay</a><br />
+          License: Free for personal and commercial use
+        </li>
+        <li>
+          <em>Mountain Cultivation</em><br />
+          Source: <a href="https://unsplash.com/photos/photo-of-cultivated-field-in-mountains" target="_blank" rel="noopener noreferrer">Unsplash (example)</a><br />
+          License: Free for personal and commercial use
+        </li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+
+        <p class="top"><a href="#top">Go top</a></p>
+    </main>
+
+    <!-- Sidebar Navigation -->
+    <aside>
+        <h3>Navigation</h3>
+        <ul class="top-level-ul">
+            <li><a href="#splshscreen">Splash Page</a></li>
+            <li><a href="#voluteer">Volunteer Page</a></li>
+            <li><a href="#content">Content Page</a></li>
+            <li><a href="#challenge">Challenges & Lessons Learned</a></li>
+            <li><a href="#compliance">Compliance</a></li>
+            <li><a href="#ref">References</a></li>
+        </ul>
+    </aside>
+</div>
+
+<footer>
+      <div class="footer-container">
+    
+        <!-- Column 1 with icons under Contact Us -->
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <div class="footer-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <h4>Page Editors</h4>
+          <ul>
+            <li><a href="pageEditor_ST1.html">Student 01 Page Editor</a></li>
+            <li><a href="Student2/pageEditor_ST2.html">Student 02 Page Editor</a></li>
+            <li><a href="Student3/pageEditor_ST3.html">Student 03 Page Editor</a></li>
+            <li><a href="Student4/editor.html">Student 04 Page Editor</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h4>Validation Pages</h4>
+          <ul>
+            <li><a href="validation_ST1.html">Student 01 Validation Page</a></li>
+            <li><a href="Student2/validation_ST2.html">Student 02 Validation Page</a></li>
+            <li><a href="Student3/validation _ ST3.html">Student 03 Validation Page</a></li>
+            <li><a href="Student4/Validation.html">Student 04 Validation Page</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Rights -->
+      <div class="footer-rights">
+        &copy; 2025 Life on Land. All Rights Reserved.
+      </div>
+    </footer>
+
+
+</body>
+</html>

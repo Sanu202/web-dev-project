@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Evidence – Rashmi De Silva</title>
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/SavingEndangeredSpecies.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      background: #f7fdfc;
+      color: #23423a;
+    }
+    .header {
+      background: #e0f7fa;
+      border-bottom: 3px solid #328E6E;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1100;
+    }
+    .header .logo img {
+      height: 54px;
+      margin-left: 32px;
+    }
+    .header .slogan {
+      font-size: 1.5rem;
+      color: #328E6E;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      flex: 1;
+      text-align: center;
+    }
+    .profile-icon {
+      margin-right: 32px;
+      background: #c8e6c9;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .navbar {
+      margin-top: 80px;
+      width: 100%;
+      background: #328E6E;
+      border-bottom: 2px solid #b2dfdb;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .navbar a, .navbar .dropdown > a {
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 28px;
+      font-size: 1.08rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      display: inline-block;
+      border-right: 1px solid #b2dfdb;
+      transition: background 0.2s, color 0.2s;
+    }
+    .navbar a:last-child {
+      border-right: none;
+    }
+    .navbar a:hover, .navbar a:focus {
+      background: #b2dfdb;
+      color: #328E6E;
+    }
+    .navbar .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .navbar .dropdown-content {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background: #328E6E;
+      min-width: 220px;
+      border: 1px solid #b2dfdb;
+      border-top: none;
+    }
+    .navbar .dropdown:hover .dropdown-content,
+    .navbar .dropdown:focus-within .dropdown-content {
+      display: block;
+    }
+    .navbar .dropdown-content a {
+      display: block;
+      padding: 14px 22px;
+      color: #fff;
+      background: none;
+      border-bottom: 1px solid #b2dfdb;
+      font-size: 1rem;
+    }
+    .navbar .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+    .navbar .dropdown-content a:hover, .navbar .dropdown-content a:focus {
+      background: #b2dfdb;
+      color: #328E6E;
+    }
+    main {
+      margin: 140px auto 0 auto;
+      max-width: 1200px;
+      padding: 0;
+      background: none;
+      border-radius: 0;
+      box-shadow: none;
+      border-left: none;
+      border-right: none;
+    }
+    .validation-title {
+      background: #328E6E;
+      color: #fff;
+      padding: 36px 0 18px 0;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      border-radius: 0 0 60px 60px/0 0 30px 30px;
+      margin-bottom: 0;
+    }
+    .student-details {
+      margin: 0;
+      padding: 32px 0 16px 0;
+      border-bottom: 2px solid #b2dfdb;
+      background: none;
+      color: #145a32;
+      font-size: 1.13em;
+      text-align: center;
+    }
+    .student-details p {
+      margin: 8px 0;
+      font-size: 1.08em;
+      color: #145a32;
+    }
+    .section-block {
+      margin: 0;
+      padding: 38px 0 0 0;
+      border-bottom: 0px dashed #b2dfdb;
+    }
+    h2 {
+      color: #328E6E;
+      font-size: 2rem;
+      margin: 0 0 12px 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      letter-spacing: 0.03em;
+      background: none;
+      border: none;
+      padding: 0;
+      text-align: left;
+    }
+    h3 {
+      color: #1b5e20;
+      font-size: 1.18rem;
+      margin: 24px 0 0 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      border: none;
+      padding: 0;
+      background: none;
+    }
+    img {
+      max-width: 100%;
+      border: 1.5px solid #8bc34a;
+      border-radius: 0;
+      box-shadow: none;
+      margin: 18px 0 0 0;
+      background: #f9fff9;
+      display: block;
+    }
+    p, ul, li {
+      line-height: 1.8;
+      margin-top: 14px;
+      font-size: 1.08rem;
+      color: #23423a;
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      background: none;
+    }
+    .summary-table {
+      width: 100%;
+      margin: 24px 0 36px 0;
+      border-collapse: collapse;
+      font-size: 1.05em;
+      background: none;
+      border-radius: 0;
+      overflow: visible;
+      box-shadow: none;
+      border: 1px solid #b2dfdb;
+    }
+    .summary-table th, .summary-table td {
+      border: 1px solid #b2dfdb;
+      padding: 13px 18px;
+      text-align: left;
+      font-size: 1.05em;
+      background: none;
+    }
+    .summary-table th {
+      background: #e0f7fa;
+      color: #23423a;
+      font-weight: 700;
+      font-size: 1.12em;
+      letter-spacing: 0.02em;
+      border-bottom: 2px solid #8bc34a;
+    }
+    .summary-table td {
+      background: #f9fff9;
+      color: #23423a;
+    }
+    .tools {
+    margin-bottom: 18px;
+    background: none;
+    padding: 0;
+    color: #145a32;
+    border-bottom: 0px solid #b2dfdb;
+    }
+    .go-top {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #328E6E;
+      color: #fff;
+      font-size: 1.7rem;
+      padding: 12px 16px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.18);
+      z-index: 1000;
+      transition: background 0.2s, color 0.2s;
+      border: 2px solid #8bc34a;
+    }
+    .go-top:hover, .go-top:focus {
+      background: #8bc34a;
+      color: #23423a;
+      outline: none;
+    }
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      color: #fff;
+      font-size: 1.08em;
+      background: linear-gradient(90deg, #328E6E 80%, #b2dfdb 100%);
+      border-top: 2px solid #8bc34a;
+      padding-top: 18px;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 24px;
+    }
+    .footer-column {
+      flex: 1;
+      padding: 0 10px;
+      min-width: 180px;
+    }
+    .footer-column ul li {
+      margin-bottom: 7px;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.01em;
+      transition: color 0.2s;
+    }
+    .footer-column a:hover {
+      color: #8bc34a;
+      text-decoration: underline;
+    }
+    .footer-icons a {
+      margin-right: 10px;
+      color: #fff;
+      font-size: 1.3em;
+      transition: color 0.2s;
+    }
+    .footer-icons a:hover {
+      color: #8bc34a;
+    }
+    .footer-rights {
+      margin-top: 18px;
+      font-size: 0.98em;
+      color: #e0f7fa;
+    }
+    @media (max-width: 900px) {
+      .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding-bottom: 8px;
+      }
+      .navbar > a,
+      .navbar .dropdown > a {
+        padding: 14px 10px;
+        font-size: 1rem;
+        height: auto;
+      }
+      .dropdown-content {
+        min-width: 160px;
+        top: 48px;
+      }
+      main {
+        border-left: none;
+        border-right: none;
+      }
+    }
+    @media (max-width: 700px) {
+      .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 6vw;
+      }
+      .header .slogan {
+        margin-left: 0;
+        margin-top: 8px;
+        font-size: 1.1rem;
+      }
+      body {
+        padding-top: 130px;
+      }
+      main {
+        padding: 18px 4vw;
+      }
+      .student-details { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+    </div>
+    <div class="slogan">Protect. Prospor. Preserve.</div>
+    <a href="../Student4/User Profile.html" target="_blank" rel="noopener noreferrer" class="profile-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#2e7d32" viewBox="0 0 24 24">
+        <path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.4c-3.2 0-9.5 1.6-9.5 4.8v1.4h19v-1.4c0-3.2-6.3-4.8-9.5-4.8z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="table.html">Table</a>
+    <a href="../volunteer.html">Volunteer</a>
+    <div class="dropdown">
+      <a href="#">Research <span class="arrow">⏷</span></a>
+      <div class="dropdown-content">
+        <a href="../content_ST1.html">Mountain Ecosystems</a>
+        <a href="content_ST2.html">Saving Endangered Species</a>
+        <a href="../Student3/content_ST3.html">Desertification and Soil Degredation</a>
+        <a href="../Student4/content_ST4.html">Biodiversity Conservations</a>
+      </div>
+    </div>
+    <a href="../Student3/feedback.html">Feedback</a>
+    <a href="../Student4/Sitemap.html">Sitemap</a>
+    <a href="../Student3/team.html">Our team</a>
+  </div>
+
+  <main>
+    <div class="validation-title">Validation Evidence – Rashmi De Silva</div>
+    <section class="student-details">
+      <p><strong>Name:</strong> Rashmi De Silva</p>
+      <p><strong>Student ID:</strong>w2149613</p>
+      <p><strong>Role:</strong> Content & Styling Developer</p>
+      <p><strong>Pages Developed:</strong> Home Page, Content Page, Table Page, Page Editor</p>
+    </section>
+
+    <section class="section-block">
+      <h2>Validation Evidence Overview</h2>
+      <p>
+        This page presents the validation evidence for all HTML and CSS files developed by Rashmi De Silva (Student 2) for the Life on Land project. All pages have been validated using the W3C Markup Validator and CSS Validator to ensure compliance with web standards and best practices.
+      </p>
+    </section>
+    
+    <section class="section-block tools">
+      <h3>Validation Tools Used:</h3>
+      <ul>
+        <li>W3C Markup Validator - <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a></li>
+        <li>W3C CSS Validator - <a href="https://jigsaw.w3.org/css-validator/" target="_blank">https://jigsaw.w3.org/css-validator/</a></li>
+      </ul>
+    </section>
+
+    <section class="section-block">
+      <table class="summary-table">
+        <thead>
+          <tr>
+            <th>Page/File</th>
+            <th>Type</th>
+            <th>HTML Status</th>
+            <th>CSS Status</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>home.html</td>
+            <td>HTML</td>
+            <td>✓ Valid</td>
+            <td>✓ Valid</td>
+            <td>No errors or warnings</td>
+          </tr>
+          <tr>
+            <td>content_ST2.html</td>
+            <td>HTML</td>
+            <td>✓ Valid</td>
+            <td>✓ Valid</td>
+            <td>No errors or warnings</td>
+          </tr>
+          <tr>
+            <td>table.html</td>
+            <td>HTML</td>
+            <td>✓ Valid</td>
+            <td>✓ Valid</td>
+            <td>No errors or warnings</td>
+          </tr>
+          <tr>
+            <td>pageEditor_ST2.html</td>
+            <td>HTML</td>
+            <td>✓ Valid</td>
+            <td>✓ Valid</td>
+            <td>No errors or warnings</td>
+          </tr>
+          <tr>
+            <td>styles/styles.css</td>
+            <td>CSS</td>
+            <td>N/A</td>
+            <td>✓ Valid</td>
+            <td>No errors or warnings</td>
+          </tr>
+          <tr>
+            <td>styles/desertification.css</td>
+            <td>CSS</td>
+            <td>N/A</td>
+            <td>✓ Valid</td>
+            <td>No errors or warnings</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section-block">
+      <h2>Home Page Validation</h2>
+      <img src="images/validation_home.png" alt="Home page HTML and CSS validation screenshot">
+      <p>The home page validation shows clean HTML5 markup with proper semantic structure and valid CSS styling.</p>
+    </section>
+
+    <section class="section-block">
+      <h2>Content Page Validation</h2>
+      <img src="images/validation_content_ST2.png" alt="Content page HTML and CSS validation screenshot">
+      <p>The content page demonstrates proper use of semantic HTML elements and accessible markup structure.</p>
+    </section>
+
+    <section class="section-block">
+      <h2>Table Page Validation</h2>
+      <img src="images/validation_table.png" alt="Table page HTML and CSS validation screenshot">
+      <p>The table page shows valid HTML table structure with proper accessibility attributes and responsive CSS.</p>
+    </section>
+
+    <section class="section-block">
+      <h2>Page Editor Validation</h2>
+      <img src="images/validation_pageEditor_ST2.png" alt="Page editor HTML and CSS validation screenshot">
+      <p>The page editor demonstrates clean markup with proper form elements and semantic structure.</p>
+    </section>
+
+    <section class="section-block">
+      <h2>CSS Stylesheets Validation</h2>
+      <img src="images/validation_styles1.png" alt="CSS stylesheets Saving Endangered species validation screenshot">
+      <img src="images/validation_styles2.png" alt="CSS stylesheets footer validation screenshot">
+      <img src="images/validation_styles3.png" alt="CSS stylesheets header validation screenshot">
+      <img src="images/validation_styles4.png" alt="CSS stylesheets navigation bar validation screenshot">
+      <img src="images/validation_styles5.png" alt="CSS stylesheets Page Editor validation screenshot">
+      <img src="images/validation_styles6.png" alt="CSS stylesheets Styles validation screenshot">
+      <p>All CSS files validate successfully with no errors, showing proper syntax and cross-browser compatibility.</p>
+    </section>
+
+    <section class="section-block">
+      <h2>Validation Summary</h2>
+      <p>Complete validation summary showing all pages and stylesheets pass W3C validation standards.</p>
+    </section>
+
+    <section class="section-block">
+      <h2>Reflection</h2>
+      <p>
+        Throughout the development process, maintaining W3C compliance was a priority. The validation process helped identify and resolve several issues including:
+      </p>
+      <ul>
+        <li>Proper semantic HTML5 element usage</li>
+        <li>Accessibility improvements with alt attributes and ARIA labels</li>
+        <li>CSS syntax optimization and cross-browser compatibility</li>
+        <li>Responsive design implementation following best practices</li>
+      </ul>
+      <p>
+        All pages now successfully validate against W3C standards, ensuring better accessibility, SEO performance, and cross-browser compatibility for the Life on Land project.
+      </p>
+    </section>
+    <a href="#top" class="go-top" title="Back to top">↑</a>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="../Student3/feedback.html">Contact Us</a></li>
+        </ul>
+        <div class="footer-icons">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+       <!-- Column 2 -->
+      <div class="footer-column">
+        <h4>Page Editors</h4>
+        <ul>
+         <li><a href="../pageEditor_ST1.html">Student 01 Page Editor</a></li>
+          <li><a href="pageEditor_ST2.html">Student 02 Page Editor</a></li>
+          <li><a href="../Student3/pageEditor_ST3.html">Student 03 Page Editor</a></li>
+          <li><a href="../Student4/editor.html">Student 04 Page Editor</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="footer-column">
+        <h4>Validation Pages</h4>
+        <ul>
+       <li><a href="../validation_ST1.html">Student 01 Validation Page</a></li>
+          <li><a href="validation_ST2.html">Student 02 Validation Page</a></li>
+          <li><a href="../Student3/validation _ ST3.html">Student 03 Validation Page</a></li>
+          <li><a href="../Student4/Validation.html">Student 04 Validation Page</a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="footer-rights">
+      &copy; 2025 Life on Land. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>

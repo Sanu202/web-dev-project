@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor - Ayora Fernando</title>
+    <link rel="stylesheet" href="styles/pageEditor.css">
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="styles/content_ST3.css"/>
+     
+</head>
+
+<body>
+    <!-- Header with logo, slogan, and profile icon -->
+    <div class="header">
+      <div class="logo">
+        <img src="images/logo.jpeg" alt="Logo" />
+      </div>
+      <div class="slogan">Protect. Prospor. Preserve.</div>
+      <a
+        href="profile.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="profile-icon"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          fill="#328E6E"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.4c-3.2 0-9.5 1.6-9.5 4.8v1.4h19v-1.4c0-3.2-6.3-4.8-9.5-4.8z"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Navigation bar -->
+   <div class="navbar">
+      <a href="../Student2/home.html">Home</a>
+      <a href="../Student2/table.html">Table</a>
+      <a href="../volunteer.html">Volunteer</a>
+      <div class="dropdown">
+        <a href="#">Research <span class="arrow">⏷</span></a>
+        <div class="dropdown-content">
+          <a href="../content_ST1.html">Mountain Ecosystems</a>
+          <a href="../Student2/content_ST2.html">Saving Endangered Species</a>
+          <a href="content_ST3.html">Desertification and Soil Degredation</a>
+          <a href="../Student4/content_ST4.html">Biodiversity Conservationss</a>
+        </div>
+      </div>
+      <a href="feedback.html">Feedback</a>
+      <a href="../Student4/Sitemap.html">Sitemap</a>
+      <a href="team.html">Our team</a>
+    </div>
+   
+
+
+
+<section class="stud">
+    <h2>Ayora Fernando - Student 3 (Feedback Form & Team Pages Developer)</h2>
+   
+    
+</section>
+
+<div class="container">
+    <main>
+
+        <!-- Feedback Form Section -->
+        <section>
+            <h2 id="feedback">Feedback Form Page</h2>
+
+            <h3>Technical Description</h3>
+            <p>
+                The Feedback Form was designed using semantic HTML elements such as &lt;form&gt;, &lt;label&gt;, &lt;input&gt;, &lt;textarea&gt;, and &lt;select&gt; . 
+                This ensures proper structure and allows screen readers to interpret the form correctly.CSS 
+                Flexbox was applied to center the form on the page, making the layout responsive across different screen sizes.
+                Visual styling includes the use of border-radius to create rounded input fields, box-shadow for subtle depth , and consistent padding for spacing.
+                A JavaScript character counter provides live feedback within the comment field to enhance user experience.
+            </p>
+
+            <h3> Key Tags and Techniques</h3>
+            <ul>
+                <li>&lt;form&gt; — Defines the form structure.</li>
+        <li>&lt;label for="id"&gt; — Connects labels to form fields for accessibility.</li>
+        <li>&lt;input type="text/email/number"&gt; — Gathers user inputs.</li>
+        <li>&lt;textarea&gt; — Allows multiline user comments.</li>
+        <li>&lt;select&gt; with &lt;option&gt; — Dropdown selection for user preference.</li>
+        <li><strong>required</strong> attribute — Ensures fields are mandatory.</li>
+        <li><strong>max-width</strong>, <strong>padding</strong> — Controls layout width and spacing.</li>
+        <li><strong>border-radius</strong> — Smooth, rounded corners.</li>
+        <li><strong>box-shadow</strong> — Adds visual depth.</li>
+        <li><strong>Flexbox</strong> — Aligns and centers the form.</li>
+            </ul>
+            
+
+            <h3>Accessibility</h3>
+            <ul>
+                <li>Clear labels linked to inputs via <strong>for</strong> attribute.</li>
+                <li>Logical tab order for keyboard users.</li>
+                <li>High-contrast text and input borders.</li>
+                <li>Visible hover and focus states for interactive elements.</li>
+                <li>Real-time character counter for clarity.</li>
+            </ul>
+
+            <h3>Links</h3>
+            <ul>
+                <li><a href="Form.html" target="_blank">View the Feedback Form Page</a></li>
+                <li><a href="validation_ST3.html#feedbackVal" target="_blank">Validation for Feedback Form Page</a></li>
+            </ul>
+        </section>
+
+        <!-- Team Page Section -->
+        <section>
+            <h2 id="team">Team Page</h2>
+
+            <h3>Technical Description</h3>
+            <p>
+                The Team Page showcases group members using visually appealing profile cards. 
+        Each member's information is displayed within a &lt;div&gt; styled with Flexbox to ensure even spacing and responsiveness. 
+        Profile images are contained within &lt;img&gt; tags, styled with border-radius for circular presentation and object-fit to maintain aspect ratio. 
+        Hover effects enhance interactivity, and box-shadow creates a subtle 3D effect around each card. 
+        The layout adjusts automatically across devices using flexible sizing.
+            </p>
+            <h3> Key Tags and Techniques</h3>
+            <ul>
+                <li>&lt;div class="member"&gt; — Profile card container.</li>
+                <li>&lt;img src="..." alt="..."&gt; — Displays and describes profile images.</li>
+                <li>&lt;h3&gt; — Displays member names and roles.</li>
+                <li><strong>Flexbox</strong> — Aligns cards using display: flex; flex-wrap: wrap; justify-content: center.</li>
+                <li><strong>border-radius: 50%</strong> — Creates circular profile images.</li>
+                <li><strong>object-fit: cover</strong> — Prevents image distortion.</li>
+                <li><strong>box-shadow</strong> — Adds depth to cards.</li>
+                <li><strong>gap</strong> — Maintains spacing between members.</li>
+    
+            </ul>
+
+            <h3>Accessibility</h3>
+            <ul>
+                <li>Meaningful alt text on all images.</li>
+                <li>Keyboard focus styles for accessibility.</li>
+                <li>Hover effects respect reduced motion preferences.</li>
+                <li>Responsive design prevents overlapping content.</li>
+            </ul>
+
+            <h3>Links</h3>
+            <ul>
+                <li><a href="TEAM.html" target="_blank">View the Team Page</a></li>
+                <li><a href="validation_ST3.html#teamVal" target="_blank">Validation for Team Page</a></li>
+            </ul>
+        </section>
+
+        <!-- Content Page Section -->
+        <section>
+            <h2 id="content">Content Page (ST3)</h2>
+
+            <h3>Technical Description</h3>
+            <p>
+               The Content Page delivers structured information using semantic tags like &lt;section&gt;, &lt;article&gt;, and &lt;h2&gt;. 
+                Lists are presented with &lt;ul&gt; and &lt;li&gt;, styled with spacing to improve readability. 
+                A background gradient provides visual appeal without sacrificing contrast. 
+                CSS properties such as padding, margin, and max-width enhance content readability. 
+                The layout is fully responsive, adapting gracefully across various screen sizes.
+    
+            </p>
+            <h3> Key Tags and Techniques</h3>
+            <ul>
+                <li>&lt;section&gt;, &lt;article&gt; — Divides content into meaningful blocks.</li>
+                <li>&lt;h2&gt;, &lt;h3&gt; — Establish heading hierarchy.</li>
+                <li>&lt;ul&gt;, &lt;li&gt; — Organized lists for key information.</li>
+                <li><strong>CSS gradient background</strong> — Visual enhancement using:
+                    <br><code>background: linear-gradient(135deg, #d7f5d3 25%, #a3d89f 75%);</code>
+                </li>
+                <li><strong>padding</strong>, <strong>margin</strong> — Controls spacing.</li>
+                <li><strong>Responsive design</strong> — Ensures mobile compatibility.</li>
+            </ul>
+
+            <h3>Accessibility</h3>
+            <ul>
+                <li>Logical heading structure for screen readers.</li>
+                <li>Adequate spacing improves readability.</li>
+                <li>High-contrast text over background.</li>
+                <li>Images include descriptive alt attributes.</li>
+                <li>Layout avoids content overflow on small screens.</li>
+            </ul>
+
+                
+            
+
+            <h3>Links</h3>
+            <ul>
+                <li><a href="desertification.html" target="_blank">View the Content Page</a></li>
+                <li><a href="validation_ST3.html#contentVal" target="_blank">Validation for Content Page</a></li>
+            </ul>
+        </section>
+
+        <!-- Challenges & Lessons Learned -->
+        <section>
+            <h2 id="challenge">Challenges and Lessons Learned</h2>
+            <p>
+                A major challenge in developing the Feedback Form was achieving a responsive, centered design. Initially, the form 
+                appeared unaligned on smaller screens. By applying CSS Flexbox and max-width properties, I ensured proper alignment across devices. 
+            </p>
+            <p>
+                The Team Page also presented difficulties with maintaining uniform image sizes. Using fixed width, height, and object-fit properties 
+                resolved the issue. This project enhanced my skills in responsive design, accessibility, and form validation.
+            </p>
+        </section>
+
+        <!-- Compliance Section -->
+        <section>
+            <h2 id="compliance">Compliance</h2>
+            <p>
+                The pages follow Janet web publishing regulations by prioritizing accessibility, responsive design, and valid code. 
+                All images include alt text, headings follow a logical structure, and color contrast meets accessibility standards.
+                The pages were validated using W3C tools, ensuring correct HTML and CSS syntax.
+            </p>
+        </section>
+
+        <!-- References Section -->
+        <section>
+            <h2 id="ref">References</h2>
+            <ul class="ref">
+                <li>W3Schools. (2025). <i>HTML Forms Tutorial</i>. Available at: <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">https://www.w3schools.com/html/html_forms.asp</a></li>
+                <li>MDN Web Docs. (2025). <i>CSS Flexbox Guide</i>. Available at: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout</a></li>
+                <li>Duckett, J. (2011). <i>HTML and CSS: Design and Build Websites</i>. John Wiley & Sons.</li>
+                <li>Pexels (2025). <i>Dry Cracked Land Photographs</i>. Available at: <a href="https://www.pexels.com/search/Dry%20cracked%20land/" target="_blank">https://www.pexels.com/search/Dry%20cracked%20land/</a> (Accessed: 06 July 2025).</li>
+                <li>Pexels (2022). <i>Plant Sprout on Dry Soil</i>. Available at: <a href="https://www.pexels.com/photo/plant-sprout-on-dry-soil-11840887/" target="_blank">
+                    https://www.pexels.com/photo/plant-sprout-on-dry-soil-11840887/
+                </a> (Accessed: 06 July 2025).
+                </li>
+                <li>Pexels (2018). <i>Person Holding a Green Plant</i>. Available at: <a href="https://www.pexels.com/photo/person-holding-a-green-plant-1072824/" target="_blank" rel="noopener noreferrer">https://www.pexels.com/photo/person-holding-a-green-plant-1072824/</a> (Accessed: 06 July 2025).</li>
+                <li> StockCake (2025). <i>Kids Planting Trees</i>. Available at: <a href="https://stockcake.com/i/kids-planting-trees_1228417_848778" target="_blank" rel="noopener noreferrer">https://stockcake.com/i/kids-planting-trees_1228417_848778</a> (Accessed: 06 July 2025).</li>
+
+            </ul>
+           
+            
+        </section>
+
+        <p class="top"><a href="#top">Go top</a></p>
+    </main>
+
+    <!-- Sidebar Navigation -->
+    <aside>
+        <h3>Navigation</h3>
+        <ul class="top-level-ul">
+            <li><a href="#feedback">Feedback Form Page</a></li>
+            <li><a href="#team">Team Page</a></li>
+            <li><a href="#content">Content Page</a></li>
+            <li><a href="#challenge">Challenges & Lessons Learned</a></li>
+            <li><a href="#compliance">Compliance</a></li>
+            <li><a href="#ref">References</a></li>
+            <li><a href="#top">Back to Top</a></li>
+        </ul>
+    </aside>
+</div>
+
+<footer>
+      <div class="footer-container">
+    
+        <!-- Column 1 with icons under Contact Us -->
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="../Student2/home.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="feedback.html">Contact Us</a></li>
+          </ul>
+          <div class="footer-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+         <div class="footer-column">
+          <h4>Page Editors</h4>
+          <ul>
+            <li><a href="../pageEditor_ST1.html">Student 01 Page Editor</a></li>
+            <li><a href="../Student2/pageEditor_ST2.html">Student 02 Page Editor</a></li>
+            <li><a href="pageEditor_ST3.html">Student 03 Page Editor</a></li>
+            <li><a href="../Student4/editor.html">Student 04 Page Editor</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h4>Validation Pages</h4>
+          <ul>
+            <li><a href="../validation_ST1.html">Student 01 Validation Page</a></li>
+            <li><a href="../Student2/validation_ST2.html">Student 02 Validation Page</a></li>
+            <li><a href="validation _ ST3.html">Student 03 Validation Page</a></li>
+            <li><a href="../Student4/Validation.html">Student 04 Validation Page</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Rights -->
+      <div class="footer-rights">
+        &copy; 2025 Life on Land. All Rights Reserved.
+      </div>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* Validation Images */
+section img {
+    width: 80%;   /* Adjust size as needed */
+    max-width: 600px;
+    display: block;
+    margin: 15px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Back to Page Editor Buttons */
+section a {
+    display: inline-block;
+    background-color: #07ca35;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: background-color 0.3s, box-shadow 0.3s ease;
+}
+
+section a:hover {
+    background-color: #48ce9f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.back-btn {
+    display: inline-block;
+    background-color: #07ca35;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: background-color 0.3s, box-shadow 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #48ce9f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
