@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Volunteer Programs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+       <link rel="stylesheet" href="styles/volunteer.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f0f9f4;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      h2 {
+        color: #328e6e;
+        padding-bottom: 20px;
+    
+      }
+      .sort-dropdown {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        color: #328e6e;
+      }
+
+      .sort-dropdown select {
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        background-color: #ffffff;
+        font-size: 14px;
+        color: #333;
+        outline: none;
+        transition: border 0.3s ease;
+      }
+
+      .sort-dropdown select:hover,
+      .sort-dropdown select:focus {
+        border-color: #328e6e;
+      }
+
+      .programs {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        flex: 1;
+        min-width: 350px;
+        max-width: 500px;
+        transition: transform 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        padding: 15px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 10px 0;
+        font-size: 0.9em;
+      }
+
+      .tag {
+        background: #c8e6c9;
+        padding: 5px 10px;
+        border-radius: 20px;
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+      }
+
+      .btn {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-view {
+        background-color: #328e6e;
+        color: white;
+        margin-right: 10px;
+      }
+
+      .btn-view:hover {
+        background-color: #276e59;
+      }
+
+      .btn-apply {
+        background-color: #66bb6a;
+        color: white;
+      }
+
+      .btn-apply:hover {
+        background-color: #519a56;
+      }
+
+      .review-section {
+        margin-top: 40px;
+      }
+
+      .review-score {
+        font-size: 24px;
+        color: #328e6e;
+      }
+
+      .reviews {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .review-card {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .review-card p {
+        margin: 10px 0;
+      }
+
+      .see-more {
+        color: #328e6e;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .see-more:hover {
+        color: rgb(18, 18, 155);
+      }
+
+      .feedback-form {
+        margin-top: 30px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .feedback-form h3 {
+        color: #328e6e;
+      }
+
+      textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        resize: none;
+      }
+
+      .rating-buttons {
+        margin: 15px 0;
+      }
+
+      .rating-buttons span {
+        font-size: 24px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .rating-buttons span:hover {
+        transform: scale(1.3);
+      }
+
+      .form-buttons {
+        margin-top: 10px;
+      }
+
+      .form-buttons button {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .send-btn {
+        background-color: #328e6e;
+        color: white;
+      }
+
+      .send-btn:hover {
+        background-color: #276e59;
+      }
+
+      .cancel-btn {
+        background-color: rgb(181, 151, 95);
+        color: white;
+      }
+
+      .cancel-btn:hover {
+        background-color: rgb(202, 219, 105);
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9em;
+        color: #777;
+      }
+      .rating-buttons span {
+        font-size: 24px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        padding: 8px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .rating-buttons span:hover {
+        transform: scale(1.2); /* Increase size on hover */
+        background-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header with logo, slogan, and profile icon -->
+    <div class="header">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" />
+      </div>
+      <div class="slogan">Protect. Prospor. Preserve.</div>
+      <a
+        href="Student4/User Profile.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="profile-icon"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          fill="#328E6E"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.4c-3.2 0-9.5 1.6-9.5 4.8v1.4h19v-1.4c0-3.2-6.3-4.8-9.5-4.8z"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+      <a href="Student2/home.html">Home</a>
+      <a href="Student2/table.html">Table</a>
+      <a href="volunteer.html">Volunteer</a>
+      <div class="dropdown">
+        <a href="#">Research <span class="arrow">⏷</span></a>
+        <div class="dropdown-content">
+          <a href="content_ST1.html">Mountain Ecosystems</a>
+          <a href="Student2/content_ST2.html">Saving Endangered Species</a>
+          <a href="Student3/content_ST3.html">Desertification and Soil Degredation</a>
+          <a href="Student4/content_ST4.html">Biodiversity Conservations</a>
+        </div>
+      </div>
+      <a href="Student3/feedback.html">Feedback</a>
+      <a href="Student4/Sitemap.html">Sitemap</a>
+      <a href="Student3/team.html">Our team</a>
+    </div>
+    <div class="container">
+      <h2>450 Volunteer Programs Found</h2>
+      <!-- Dropdown for sorting -->
+      <div class="sort-dropdown">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect">
+          <option value="default">Default</option>
+          <option value="popularity">Most Popular</option>
+          <option value="price">Lowest Price</option>
+          <option value="duration">Shortest Duration</option>
+        </select>
+      </div>
+
+      <div class="programs">
+        <!-- Card 1 -->
+        <div class="card">
+          <img
+            src="images/forestconservation.jpg"
+            alt="Forest Conservation"
+          />
+          <div class="card-body">
+            <h3>🌍 Kenya - Forest Conservation in Nairobi</h3>
+            <div class="tags">
+              <div class="tag">Protects Forests</div>
+              <div class="tag">3–5 hrs/day</div>
+              <div class="tag">From £290</div>
+            </div>
+            <div class="info">
+              <span>2 weeks</span>
+              <span>£435 | £31/day</span>
+            </div>
+            <p>
+              Help preserve native forests and educate locals about biodiversity
+              and sustainability in the Nairobi highlands.
+            </p>
+            <button class="btn btn-view">View Project</button>
+            <button class="btn btn-apply">Apply</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <img
+            src="images/habitat.jpg"
+            alt="Wildlife Protection"
+          />
+          <div class="card-body">
+            <h3>🦜 Brazil - Wildlife Habitat Restoration in Amazon</h3>
+            <div class="tags">
+              <div class="tag">Supports Biodiversity</div>
+              <div class="tag">4–6 hrs/day</div>
+              <div class="tag">From £410</div>
+            </div>
+            <div class="info">
+              <span>2 weeks</span>
+              <span>£599 | £43/day</span>
+            </div>
+            <p>
+              Work on habitat restoration, native planting, and animal care in
+              one of the world’s most critical ecosystems.
+            </p>
+            <button class="btn btn-view">View Project</button>
+            <button class="btn btn-apply">Apply</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <img
+            src="images/costalclean.jpg"
+            alt="Beach Cleanup"
+          />
+          <div class="card-body">
+            <h3>🏖️ Thailand - Coastal Cleanup in Phuket</h3>
+            <div class="tags">
+              <div class="tag">Clean Oceans</div>
+              <div class="tag">3 hrs/day</div>
+              <div class="tag">From £250</div>
+            </div>
+            <div class="info">
+              <span>1 week</span>
+              <span>£300 | £43/day</span>
+            </div>
+            <p>
+              Join the mission to remove plastic waste and protect marine
+              ecosystems along Thailand’s beaches.
+            </p>
+            <button class="btn btn-view">View Project</button>
+            <button class="btn btn-apply">Apply</button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+          <img
+            src="images/treeplanting.jpg"
+            alt="Tree Planting"
+          />
+          <div class="card-body">
+            <h3>🌱 India - Urban Tree Planting in Bangalore</h3>
+            <div class="tags">
+              <div class="tag">Urban Greening</div>
+              <div class="tag">2–4 hrs/day</div>
+              <div class="tag">From £180</div>
+            </div>
+            <div class="info">
+              <span>10 days</span>
+              <span>£250 | £25/day</span>
+            </div>
+            <p>
+              Contribute to reducing urban heat and pollution by planting trees
+              in crowded city neighborhoods.
+            </p>
+            <button class="btn btn-view">View Project</button>
+            <button class="btn btn-apply">Apply</button>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+          <img
+            src="images/agrofarming.jpg"
+            alt="Agroforestry Project"
+          />
+          <div class="card-body">
+            <h3>🌾 Peru - Agroforestry Education in Cusco</h3>
+            <div class="tags">
+              <div class="tag">Food Security</div>
+              <div class="tag">4 hrs/day</div>
+              <div class="tag">From £330</div>
+            </div>
+            <div class="info">
+              <span>2 weeks</span>
+              <span>£480 | £34/day</span>
+            </div>
+            <p>
+              Help local farmers implement sustainable land practices and
+              educate youth on food systems.
+            </p>
+            <button class="btn btn-view">View Project</button>
+            <button class="btn btn-apply">Apply</button>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+          <img
+            src="images/wildlifemonitor.jpg"
+            alt="Wildlife Monitoring"
+          />
+          <div class="card-body">
+            <h3>🦓 South Africa - Wildlife Monitoring in Kruger</h3>
+            <div class="tags">
+              <div class="tag">Species Tracking</div>
+              <div class="tag">5 hrs/day</div>
+              <div class="tag">From £460</div>
+            </div>
+            <div class="info">
+              <span>3 weeks</span>
+              <span>£690 | £33/day</span>
+            </div>
+            <p>
+              Track endangered species, analyze data, and assist with
+              conservation reporting in Kruger National Park.
+            </p>
+            <button class="btn btn-view">View Project</button>
+            <button class="btn btn-apply">Apply</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review section -->
+      <div class="review-section">
+        <div class="review-score">9.4/10 <small>Exceptional</small></div>
+        <p>Based on 109 verified reviews</p>
+
+        <div class="reviews">
+          <div class="review-card">
+            <strong>10/10 Amazing!</strong>
+            <p>
+              "An unforgettable experience in the Amazon. Learned so much about
+              wildlife conservation." <span class="see-more">See More</span>
+            </p>
+            <small>– Lucas D., Sep 2023</small>
+          </div>
+          <div class="review-card">
+            <strong>10/10 Excellent</strong>
+            <p>
+              "The team in Nairobi was welcoming and supportive. Loved every
+              part of the project." <span class="see-more">See More</span>
+            </p>
+            <small>– Sarah M., Oct 2023</small>
+          </div>
+          <div class="review-card">
+            <strong>9/10 Wonderful</strong>
+            <p>
+              "Planting trees in Bangalore was both relaxing and rewarding.
+              Great initiative!" <span class="see-more">See More</span>
+            </p>
+            <small>– Arjun R., Dec 2023</small>
+          </div>
+          <div class="review-card">
+            <strong>10/10 Life-changing</strong>
+            <p>
+              "Volunteering in Peru taught me sustainable agriculture and local
+              culture." <span class="see-more">See More</span>
+            </p>
+            <small>– Maria C., Jan 2024</small>
+          </div>
+          <div class="review-card">
+            <strong>9.5/10 Incredible</strong>
+            <p>
+              "Kruger wildlife project let me track real animals and help
+              protect endangered species."
+              <span class="see-more">See More</span>
+            </p>
+            <small>– James T., Nov 2023</small>
+          </div>
+          <div class="review-card">
+            <strong>10/10 Eye-opening</strong>
+            <p>
+              "Cleaning beaches in Phuket made me aware of plastic pollution.
+              Truly worth it." <span class="see-more">See More</span>
+            </p>
+            <small>– Aisha B., Feb 2024</small>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Feedback form -->
+      <div class="feedback-form">
+        <h3>Send Us Your Review</h3>
+        <p>Got suggestions? We’d love to hear them!</p>
+        <textarea placeholder="Type your feedback here..."></textarea>
+
+        <div class="rating-buttons">
+          <span>😡</span>
+          <span>😐</span>
+          <span>😊</span>
+          <span>😍</span>
+          <span>🌟</span>
+        </div>
+
+        <div class="form-buttons">
+          <button class="send-btn">Submit Feedback</button>
+          <button class="cancel-btn" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+      <!-- Footer -->
+      <footer>
+        <div class="footer-container">
+          <!-- Column 1 with icons under Contact Us -->
+          <div class="footer-column">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="footer-icons">
+              <a href="https://facebook.com" target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://instagram.com" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="mailto:example@gmail.com"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="footer-column">
+            <h4>Page Editors</h4>
+            <ul>
+              <li><a href="pageEditor_ST1.html">Student 01 Page Editor</a></li>
+              <li><a href="Student2/pageEditor_ST2.html">Student 02 Page Editor</a></li>
+              <li><a href="Student3/pageEditor_ST3.html">Student 03 Page Editor</a></li>
+              <li><a href="Student4/editor.html">Student 04 Page Editor</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="footer-column">
+            <h4>Validation Pages</h4>
+            <ul>
+              <li><a href="validation_ST1.html">Student 01 Validation Page</a></li>
+              <li><a href="Student2/validation_ST2.html">Student 02 Validation Page</a></li>
+              <li><a href="Student3/validation _ ST3.html">Student 03 Validation Page</a></li>
+              <li><a href="Student4/Validation.html">Student 04 Validation Page</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Rights -->
+        <div class="footer-rights">
+          &copy; 2025 Life on Land. All Rights Reserved.
+        </div>
+      </footer>
+  </body>
+</html>

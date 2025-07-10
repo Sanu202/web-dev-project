@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Life on Land</title>
+    
+    <link rel="stylesheet" href="styles/header.css" >
+    <link rel="stylesheet" href="styles/navbar.css" >
+    <link rel="stylesheet" href="styles/styles.css" >
+    <link rel="stylesheet" href="styles/footer.css" >
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/content_ST3.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+</head>
+
+<body>
+    <!-- Header with logo, slogan, and profile icon -->
+    <div class="header">
+      <div class="logo">
+        <img src="images/logo.jpeg" alt="Logo" >
+      </div>
+      <div class="slogan">Protect. Prospor. Preserve.</div>
+      <a
+        href="../Student4/User Profile.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="profile-icon"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          fill="#328E6E"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.4c-3.2 0-9.5 1.6-9.5 4.8v1.4h19v-1.4c0-3.2-6.3-4.8-9.5-4.8z"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Navigation bar -->
+      <div class="navbar">
+      <a href="../Student2/home.html">Home</a>
+      <a href="../Student2/table.html">Table</a>
+      <a href="../volunteer.html">Volunteer</a>
+      <div class="dropdown">
+        <a href="#">Research <span class="arrow">⏷</span></a>
+        <div class="dropdown-content">
+          <a href="../content_ST1.html">Mountain Ecosystems</a>
+          <a href="../Student2/content_ST2.html">Saving Endangered Species</a>
+          <a href="content_ST3.html">Desertification and Soil Degredation</a>
+          <a href="../Student4/content_ST4.html">Biodiversity Conservationss</a>
+        </div>
+      </div>
+      <a href="feedback.html">Feedback</a>
+      <a href="../Student4/Sitemap.html">Sitemap</a>
+      <a href="team.html">Our team</a>
+    </div>
+   
+    <main>
+            <!-- Form content -->
+        <div class="wrapper">
+            <div class="form-container">
+
+        
+                <h1>Share Your Feedback  - Life on Land</h1>
+                    <form method="post" action="#">
+                        <fieldset>
+                            <legend> Personal Details</legend>
+                            <div>
+                                <label for="name"> Full Name <span class="required">*</span>:</label>
+                                <input type="text" id="name" name="name" required title="Please enter your name">
+                            </div>
+
+                            <div>
+                        
+                                <label for="email"> E-mail Address <span class="required">*</span>: </label>
+                                <input type="email" id="email" name="email"  required title="Please enter a  valid E-mail">
+                            </div>
+
+                        <div>
+                            <label for="phone"> Telephone Number<span class="required">*</span>: </label>
+                            <input type="tel" id="phone" name="phone" required title=" Please enter a valid phone number">
+                        </div>
+
+                        <div>
+                            <label for="address">Address<span class="required">*</span>:</label>
+                            <textarea id="address" name="address" rows="3" required ></textarea>
+                        </div>
+                        </fieldset>
+                
+                        <fieldset>
+                            <legend> Feedback Details</legend>
+                <!--Topic of Interest-->
+                            <label for="actionsSelect">
+                               Which topic did you find interesting? 
+                            </label>
+                            <select id="actionsSelect" name="actions" required>
+                            <option value="" disabled selected hidden> 
+                              Select an option
+                            </option>
+                            <option value="topic1"> Mountain Ecosystems</option>
+                            <option value="topic2">Saving Endangered Species</option>
+                            <option value="topic3"> Dersertification and Land Degradation </option>
+                            <option value="topic4">Biodiversity Conservation</option>
+                            </select>
+                <!--Eco Actions-->
+                        <div>
+                            <label for="actionsInput"> 
+                                Which of the following eco-friendly actions do you practice? 
+                            </label><br>
+                            <input list="ecoActions" id="actionsInput" name="actions" placeholder=" Type or select an action">
+                            <datalist id="ecoActions">
+                            <option value= "Tree Planting"> Tree Planting</option>
+                            <option value= "Reducing Plastic Use"> Reducing Plastic Use</option> 
+                            <option value= "Using Organic Products"> Using Organic Products</option>
+                            <option value= "Recycling Household Waste"> Recycling Household Waste</option> 
+                        
+            
+                            </datalist>
+                        </div>
+
+                        <div> 
+                            <label class="wording"> Is this your first visit to our website ? </label>
+                            <label><input type="radio" name="firstvisit" id="firstVisitYes" value="yes">Yes</label>
+                            <label><input type="radio" name="firstvisit" id="firstVisitN" value="no">No</label>
+                        </div>
+
+                        <div>
+                            <label for="visit-date"> Select the date of your visit to our website (DD/MM/YYYY):</label>
+                            <input type="date" id="visit-date" name="visit-date"><br>
+                            
+                        </div> 
+
+                        <div>
+                            <label class="wording"> Was the website informative and easy to navigate?</label>
+                            
+                            <label><input type="radio" name="information" id="inforYs" value="yes">Yes</label>
+                            <label><input type="radio" name="information"  id="inforNo" value="no">No</label><br>
+                        </div>
+                        <!--Improvements-->
+                        <div>
+                            <label for="improve">If 'No', how can we improve ?</label>
+                            <textarea id="improve" name="improve" rows="3"></textarea>
+                        </div>
+
+                
+                            <label> How did you hear about us? </label>
+                            <div>
+                            <label><input type="checkbox" name="hearabout" value="friends" >Friends</label>
+                            <label><input type="checkbox" name="hearabout" value="socialmedia" >Social Media</label>
+                            <label><input type="checkbox" name="hearabout" value="school" >School / University Recommendation</label>
+                            <label><input type="checkbox" name="hearabout" value="environmet" >Environmental event or campaign</label>
+                            <label><input type="checkbox" name="hearabout" value="other" >other</label><br>
+                        </div>
+                        <div>
+                            <label class="wording">Upload an image or file  with your ideas or experiences on protecting life on land (Optional):</label>
+                            <label for="file-upload" class="cutom-file-uplaod">Upload File </label>
+
+                            
+                            <input type="file" id="file-upload" name="file" accept=".jpg,.jpeg,.png,.pdf"><br><br>
+
+                        </div>
+                        <div>
+                            <label for="update"> 
+                              Would you like to receive updates about the website or any offers?
+                            </label>
+                            <select id="update" name="update" required>
+                                <option value="" disabled selected> Select an option</option>
+                                <option value="topic1"> Yes, via Email</option>
+                                <option value="topic2"> Yes, via Phone</option>
+                                <option value="topic3"> Yes, via  both Email and Phone</option>
+                                <option value="topic4"> No,Thanks</option>
+                                
+            
+                            </select><br>
+                        </div>
+                        <div>
+                            <label class="wording"> How was your experience on our website ?</label>
+                            <button class="emoji-btn" aria-label="Very Happy">😍</button>
+                            <button class="emoji-btn" aria-label="Happy">😊</button>
+                            <button class="emoji-btn" aria-label="Neutral">😐</button>
+                            <button class="emoji-btn" aria-label="Sad">😞</button>
+                            <button class="emoji-btn" aria-label="Not Satisified">😠</button>
+                        </div>
+
+                
+                        <label class="wording">How would you rate our overall website design?</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5" >
+                            <label for="star5" title="Excellent"></label>
+
+                            <input type="radio" id="star4" name="rating" value="4" > 
+                            <label for="star4" title="Good"></label>
+
+                            <input type="radio" id="star3" name="rating" value="3" >
+                            <label for="star3" title="Neutral"></label>
+
+                            <input type="radio" id="star2" name="rating" value="2" >
+                            <label for="star2" title="Not Bad"></label>
+
+                            <input type="radio" id="star1" name="rating" value="1" >
+                            <label for="star1" title="Bad"></label>
+                        </div>
+                        <div> 
+                            <label for="comment">Any other Comments </label><br>
+                            <textarea id="comment" name="comment" rows="4" cols="50" maxlength="200" oninput="updateCharCount()"></textarea><br>
+                            <span id="char-count">200 characters remaining</span>
+                        </div>
+                        <div class="button-group">
+                            <button type="reset" class="clear.btn">Clear</button>
+                            <button type="submit" class="submit-btn ">Submit</button>
+                        </div>
+                            
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        </main>
+        <script>
+            function updateCharCount() {
+                const textarea=document.getElementById ('comment');
+                const counter=document.getElementById('char-count');
+                const remaining=200 - textarea.value.length;
+                counter.textContent = remaining + "characters remaining";
+            }
+        </script>
+
+    
+        <footer>
+          <div class="footer-container">
+    
+            <!-- Column 1 with icons under Contact Us -->
+            <div class="footer-column">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="../Student2/home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="feedback.html">Contact Us</a></li>
+              </ul>
+              <div class="footer-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+
+            <!-- Column 2 -->
+               <div class="footer-column">
+          <h4>Page Editors</h4>
+          <ul>
+            <li><a href="../pageEditor_ST1.html">Student 01 Page Editor</a></li>
+            <li><a href="../Student2/pageEditor_ST2.html">Student 02 Page Editor</a></li>
+            <li><a href="pageEditor_ST3.html">Student 03 Page Editor</a></li>
+            <li><a href="../Student4/editor.html">Student 04 Page Editor</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h4>Validation Pages</h4>
+          <ul>
+            <li><a href="../validation_ST1.html">Student 01 Validation Page</a></li>
+            <li><a href="../Student2/validation_ST2.html">Student 02 Validation Page</a></li>
+            <li><a href="validation _ ST3.html">Student 03 Validation Page</a></li>
+            <li><a href="../Student4/Validation.html">Student 04 Validation Page</a></li>
+          </ul>
+        </div>
+      </div>
+
+          <!-- Rights -->
+          <div class="footer-rights">
+            &copy; 2025 Life on Land. All Rights Reserved.
+          </div>
+        </footer>
+</body>
+</html>
+      
+              
+                        
+              

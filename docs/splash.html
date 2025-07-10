@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading Screen</title>
+
+  <!-- Redirect to home.html after 6 seconds -->
+  <meta http-equiv="refresh" content="6; url=Student2/home.html" />
+
+  <style>
+    /* Background video styling */
+    #background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 26ch; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes bounce {
+      to {
+        transform: translateY(-8px);
+        opacity: 0.7;
+      }
+    }
+
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 999;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      margin-bottom: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+      animation: fadeIn 1.2s ease-in-out forwards;
+      border: 3px solid #ffffff;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    .typing-text {
+      font-size: 3.8rem;
+      color: #E3F2FD;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #E3F2FD;
+      width: 0;
+      animation: typing 2.8s steps(26, end) forwards, blink 0.7s step-end infinite;
+      margin: 0;
+    }
+
+    #loader p {
+      font-size: 1.4rem;
+      color: #BBDEFB;
+      margin: 1.2rem 0;
+      /* animation: fadeIn 1.4s ease-in forwards; */
+      animation-delay: 3s;
+      text-align: justify;
+      max-width: 800px;
+    }
+
+    .project-members {
+      /* animation: fadeIn 1s ease-in forwards; */
+      animation-delay: 3.5s;
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .project-members h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: #FFF59D;
+    }
+
+    .project-members ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .project-members li {
+      font-size: 1.2rem;
+      color: #FFECB3;
+      margin: 4px 0;
+    }
+
+    .dot-spinner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 35px;
+      gap: 10px;
+    }
+
+    .dot-spinner span {
+      width: 12px;
+      height: 12px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      animation: bounce 0.6s infinite alternate;
+    }
+
+    .dot-spinner span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .dot-spinner span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @media screen and (max-width: 768px) {
+      .typing-text {
+        font-size: 2.4rem;
+      }
+      #loader p {
+        font-size: 1.1rem;
+      }
+      .project-members h2 {
+        font-size: 1.3rem;
+      }
+      .project-members li {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video id="background-video" autoplay muted loop>
+    <source src="videos/forest_video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Loader -->
+  <div id="loader">
+    <img src="images/logo.png" alt="Logo" class="logo" />
+    <h1 class="typing-text">Protect. Prosper. Preserve</h1>
+    <p>
+      "Our mission is to raise awareness and promote action towards protecting 
+      terrestrial ecosystems, combating deforestation, and conserving endangered species."
+    </p>
+
+    <!-- Project Members -->
+    <section class="project-members">
+      <h2>Project Members</h2>
+      <ul>
+        <li>Sanuthmi Jayalath</li>
+        <li>Ayora Fernando</li>
+        <li>Rashmi De Silva</li>
+        <li>Lisara Ransandi</li>
+      </ul>
+    </section>
+
+    <!-- Spinner -->
+    <div class="dot-spinner">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+</body>
+</html>
